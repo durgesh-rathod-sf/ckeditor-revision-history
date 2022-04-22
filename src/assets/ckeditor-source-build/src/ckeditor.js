@@ -37,9 +37,6 @@ import TrackChanges from '@ckeditor/ckeditor5-track-changes/src/trackchanges.js'
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import List from '@ckeditor/ckeditor5-list/src/list.js';
 
-import SimpleBox from '../customPlugins/simplebox/simplebox'
-import Placeholder from '../customPlugins/inlineplaceholder/placeholder';
-import Annexure from '../customPlugins/annexure/annexure';
 import Delete from '@ckeditor/ckeditor5-typing/src/delete';
 import AnnotationsUIs from '@ckeditor/ckeditor5-comments/src/annotations/annotationsuis';
 import Annotations from '@ckeditor/ckeditor5-comments/src/annotations/annotations';
@@ -93,11 +90,8 @@ Editor.builtinPlugins = [
     TextTransformation,
     TrackChanges,
     Underline,
-    SimpleBox,
-    Placeholder,
     Delete,
     List,
-    Annexure,
     AnnotationsUIs,
     Annotations,
     WordCount,
@@ -134,6 +128,7 @@ Editor.defaultConfig = {
             'redo',
             '|',
             'pageBreak',
+            'revisionHistory'
         ],
         shouldNotGroupWhenFull: false,
     },
@@ -174,9 +169,7 @@ Editor.defaultConfig = {
     fontSize: {
         options: FONTSIZE,
     },
-    placeholderConfig: {
-        types: ['date', 'color', 'name', 'surname'],
-    },
+
 };
 
 Editor.observers = {
